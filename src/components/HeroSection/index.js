@@ -2,7 +2,7 @@ import React from 'react'
 
 function HeroSection() {
   return (
-    <section id="hero">
+    <section id="hero" className="bg-dark  text-light mt-3">
       <div className="container col-xxl-8 py-5">
         <div className="row flex-lg-row-reverse align-items-center g-5">
           <div className="col-10 col-sm-8 col-lg-6">
@@ -24,7 +24,7 @@ function HeroSection() {
               This journey is about making hyper casual games with using pure
               JavaScript.
             </p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+            <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
               <a
                 href="https://github.com/sametkoyuncu"
                 target="_blank"
