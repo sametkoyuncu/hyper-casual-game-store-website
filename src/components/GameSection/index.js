@@ -43,7 +43,7 @@ function GameSection({
               target="_blank"
               className="_app_btn btn-purple rounded-pill"
             >
-              <strong style={{ color: 'white' }}>Github'ta İncele</strong>
+              <strong style={{ color: 'white' }}>Source Code</strong>
             </a>
             <a
               href={buttonTwo}
@@ -51,7 +51,7 @@ function GameSection({
               type="button"
               className="_playstore_btn btn-outline-purple rounded-pill"
             >
-              <strong>Oyna</strong>
+              <strong>Play</strong>
             </a>
           </div>
         </div>

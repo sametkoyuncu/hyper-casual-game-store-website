@@ -19,7 +19,9 @@ function HeroSection() {
             <div className="display-5 lh-1 mb-3">
               <span className="fw-bold">Hello world</span> 👋
             </div>
-            <h3>Welcome to my game universe.</h3>
+            <h3 className="text-2xl font-medium">
+              Welcome to my game universe.
+            </h3>
             <p className="lead">
               This journey is about making hyper casual games with using pure
               JavaScript.
