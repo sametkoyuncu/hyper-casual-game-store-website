@@ -1,4 +1,4 @@
-function Card({
+function GameCard({
   index,
   bgColor,
   title,
@@ -33,4 +33,4 @@ function Card({
   )
 }
 
-export default Card
+export default GameCard
