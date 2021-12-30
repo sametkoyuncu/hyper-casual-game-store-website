@@ -6,7 +6,7 @@ import './FoodThemeCss.css'
 import './App.css'
 
 import Navbar from './components/Navbar'
-import { useState } from 'react'
+import { useEffect } from 'react'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -16,23 +16,18 @@ const navigation = [
 ]
 
 function App() {
-  const gamesSection = window.document.querySelector('#games')
-  const [scrollState, setScrollState] = useState(window.screenX)
+  let gamesSection = window.document.querySelector('#games')
+  useEffect(() => {
+    gamesSection = window.document.querySelector('#games')
+  }, [])
+
   const handleScrollRight = () => {
     console.log('clicked')
-    try {
-      setScrollState(scrollState + 400)
-    } finally {
-      gamesSection.scrollTo({ left: `${scrollState}`, behavior: 'smooth' })
-    }
+    gamesSection.scrollLeft += 400
   }
   const handleScrollLeft = () => {
     console.log('clicked')
-    try {
-      setScrollState(scrollState - 400)
-    } finally {
-      gamesSection.scrollTo({ left: `${scrollState}`, behavior: 'smooth' })
-    }
+    gamesSection.scrollLeft -= 400
   }
   return (
     <div className="App">
@@ -42,20 +37,20 @@ function App() {
       <HeroSectionTailwind />
       <div className="relative">
         <button
-          className="absolute inset-y-0 left-0 px-5 z-20 bg-zinc-600/20"
+          className="invisible md:visible absolute left-0 px-5 py-5 z-20 bg-zinc-600/20"
           onClick={handleScrollLeft}
         >
           {`<`}
         </button>
         <button
-          className="absolute inset-y-0 right-0 px-5 z-20 bg-zinc-600/20"
+          className="invisible md:visible absolute inset-y-0 right-0 px-5 z-20 bg-zinc-600/20"
           onClick={handleScrollRight}
         >
           {`>`}
         </button>
         <section
           id="games"
-          className="flex flex-row flex-nowrap overflow-x-auto space-x-5 h-screen px-5 pt-52 bg-indigo-100 dark:bg-zinc-600"
+          className="flex flex-row flex-nowrap overflow-x-auto scroll-smooth space-x-5 h-screen px-5 pt-52 bg-indigo-100 dark:bg-zinc-600"
         >
           <GameCard
             index={0}
