@@ -8,45 +8,26 @@ function Card({
   buttonPlay,
 }) {
   return (
-    <div key={index} className="inline-flex" style={{ minHeight: '240px' }}>
-      <div className="w-full md:w-[540px] h-[540px] md:h-[420px] md:flex shadow-lg rounded-xl">
-        <div
-          className="h-60 lg:h-full lg:w-60 flex-none bg-cover rounded-t-xl lg:rounded-t-none lg:rounded-l-xl text-center overflow-hidden"
-          style={{
-            backgroundImage: `url('https://cdnb.artstation.com/p/assets/images/images/019/806/383/large/tara-mulder-gameoverscreen.jpg?1565092022')`,
-          }}
-          title="Woman holding a mug"
-        ></div>
-        <div className="bg-white dark:bg-zinc-800 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-4 flex flex-col justify-between leading-normal">
-          <div className="mb-8 mt-3">
-            <div className="text-gray-900 dark:text-gray-200 font-bold text-xl mb-2">
-              {title}
-            </div>
-            <p className="text-gray-700 dark:text-white text-base max-h-54">
-              {description}
-            </p>
-          </div>
-          <div className="flex items-center justify-around pb-2">
-            <div className="rounded-full mt-3">
-              <a
-                href={buttonGithub}
-                target={'_blank'}
-                className="w-full flex items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-full text-white  md:text-lg btn-indigo shadow-lg"
-              >
-                Github
-              </a>
-            </div>
-            <div className="mt-3 sm:ml-3">
-              <a
-                href={buttonPlay}
-                target={'_blank'}
-                className="w-full flex items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-full md:text-lg btn-outline-indigo shadow-lg"
-              >
-                Play
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="inline-flex flex-col h-80 min-w-[340px] p-5 bg-white dark:bg-zinc-800 dark:text-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all cursor-pointer">
+      <div className="relative">
+        <img
+          src="/img/games/doodle-jump-mobile.png"
+          className="absolute left-0 right-0 mx-auto top-[-100px] w-36 h-auto bg-indigo-500 p-3 rounded-full shadow-md"
+        ></img>
+      </div>
+      <div className="inline-flex flex-col mt-12">
+        <h2 className="text-xl my-2 font-bold">{title}</h2>
+        <p>{description.slice(0, 160) + '...'}</p>
+      </div>
+      <div className="grow"></div>
+      <div className="rounded-full shadow-lg mt-3 mb-1">
+        <a
+          href={buttonGithub}
+          target={'_blank'}
+          className="w-full flex items-center justify-center px-5 py-2 text-base font-medium rounded-full text-white  md:text-lg btn-indigo"
+        >
+          Details
+        </a>
       </div>
     </div>
   )

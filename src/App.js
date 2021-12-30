@@ -23,7 +23,7 @@ function App() {
       <HeroSectionTailwind />
       <section
         id="games"
-        className="flex flex-row flex-nowrap overflow-x-auto space-x-5 py-16 px-3 md:space-x-10 md:py-28 md:px-10 bg-indigo-100 dark:bg-zinc-600"
+        className="flex flex-row flex-nowrap overflow-x-auto space-x-5 py-16 px-3 md:space-x-10 md:py-36 md:px-10 bg-indigo-100 dark:bg-zinc-600"
       >
         <Card
           index={0}
