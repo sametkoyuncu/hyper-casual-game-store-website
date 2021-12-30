@@ -37,7 +37,7 @@ function App() {
       <HeroSectionTailwind />
       <div className="relative">
         <button
-          className="invisible md:visible absolute left-0 px-5 py-5 z-20 bg-zinc-600/20"
+          className="invisible md:visible absolute inset-y-0 left-0 px-5 py-5 z-20 bg-zinc-600/20"
           onClick={handleScrollLeft}
         >
           {`<`}
