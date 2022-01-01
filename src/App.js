@@ -36,7 +36,7 @@ function App() {
       </div>
       <HeroSectionTailwind />
       <div className="relative">
-        <button
+        {/* <button
           className="invisible md:visible absolute inset-y-0 left-0 px-5 py-5 z-20 bg-zinc-600/20"
           onClick={handleScrollLeft}
         >
@@ -47,10 +47,10 @@ function App() {
           onClick={handleScrollRight}
         >
           {`>`}
-        </button>
+        </button> */}
         <section
           id="games"
-          className="flex flex-row flex-nowrap overflow-x-auto scroll-smooth space-x-5 h-screen px-5 pt-52 bg-indigo-100 dark:bg-zinc-600"
+          className="flex flex-row flex-nowrap overflow-x-auto scroll-smooth space-x-5 h-screen px-5 pt-52 bg-indigo-100 dark:bg-zinc-600 md:grid md:gap-4 md:px-20 md:gap-y-28 md:grid-cols-3 pb-20"
         >
           <GameCard
             index={0}
