@@ -9,6 +9,10 @@ function GameCard({
 }) {
   return (
     <div className="inline-flex flex-col h-80 min-w-[340px] p-5 bg-white dark:bg-zinc-800 dark:text-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all cursor-pointer">
+      {/*
+        genişliğe ekranlara göre oran ekle 
+        grid de bozulmasın
+      */}
       <div className="relative">
         <img
           src="/img/games/doodle-jump-mobile.png"
