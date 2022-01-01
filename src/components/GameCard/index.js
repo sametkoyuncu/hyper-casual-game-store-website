@@ -4,18 +4,20 @@ function GameCard({
   title,
   description,
   image,
+  imageSmall,
   buttonGithub,
   buttonPlay,
 }) {
   return (
-    <div className="inline-flex flex-col h-80 min-w-[340px] p-5 bg-white dark:bg-zinc-800 dark:text-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all cursor-pointer">
+    <div className="inline-flex flex-col h-80 min-w-[340px] sm:!w-full p-5 bg-white dark:bg-zinc-800 dark:text-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all cursor-pointer">
       {/*
         genişliğe ekranlara göre oran ekle 
         grid de bozulmasın
       */}
       <div className="relative">
         <img
-          src="/img/games/doodle-jump-mobile.png"
+          src={imageSmall}
+          alt=""
           className="absolute left-0 right-0 mx-auto top-[-100px] w-36 h-auto bg-indigo-500 p-3 rounded-full shadow-md"
         ></img>
       </div>
@@ -28,6 +30,7 @@ function GameCard({
         <a
           href={buttonGithub}
           target={'_blank'}
+          rel="noreferrer"
           className="w-full flex items-center justify-center px-5 py-2 text-base font-medium rounded-full text-white  md:text-lg btn-indigo"
         >
           Details
