@@ -13,8 +13,7 @@ export default function Example() {
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 dark:text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                This journey is about making hyper casual games with using pure
-                JavaScript.
+                This journey is about making hyper-casual games using pure JavaScript.
               </p>
               <div className="mt-5 items-center sm:mt-8 sm:flex sm:justify-center lg:justify-start ">
                 <div className="rounded-full mt-3">
